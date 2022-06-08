@@ -6,6 +6,15 @@
     max-width: 50px;
 }
 
+.logoSW{
+    background-image: url("https://www.pngplay.com/wp-content/uploads/2/Star-Wars-Logo-Transparent-Background.png");
+    background-position: center;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 60px;
+}
+
 .btn-nav {
     display: flex;
     float: right;
@@ -20,8 +29,8 @@
 }
 
 .card {
-    width: 18rem;
-    margin-left: 15px;
+    width: 425px;
+    margin: 0px 30px 10px 0px;
 }
 
 .row-characters {
@@ -39,3 +48,33 @@ h2 {
     padding: 20px;
     color: red;
 }
+
+.img-card{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    margin: 5px 7px 0px 0px;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: white;
+    color: blue;
+}
+
+.btn-heart {
+    color: red;
+    font-size: 35px;
+    padding: 0px 8px 0px 8px;
+}
+
+.cardButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+
+
+ 
