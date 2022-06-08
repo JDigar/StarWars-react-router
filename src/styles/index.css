@@ -1,3 +1,41 @@
 /* 
     General Styles
 */
+
+.navbar svg {
+    max-width: 50px;
+}
+
+.btn-nav {
+    display: flex;
+    float: right;
+}
+
+.myCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 80%;
+}
+
+.card {
+    width: 18rem;
+    margin-left: 15px;
+}
+
+.row-characters {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.cont {
+    width: 80%;
+    margin: auto;
+}
+
+h2 {
+    padding: 20px;
+    color: red;
+}
