@@ -1,146 +1,59 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import Card from "./../component/card.js"
 import "../../styles/home.css";
+import Subtitle from "./../component/subtittleHome.js"
 
 export const Home = () => (
 <>
-	<div className="cont">
-		<h2>Characters</h2>
-	</div>
+<Subtitle title="Personajes"/>
 
 	<div className="row row-characters cont">
 	
-		<div className="card" >
-			<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+	
 	</div>
 
 
+	<Subtitle title="Planetas"/>
 
 
-	<div className="cont">
-		<h2>Planets</h2>
-	</div>
 
 	<div className="row row-characters cont">
 	
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
-
-		<div className="card" >
-		<div className="img-card"></div>
-			<div className="card-body">
-			<h5 className="card-title">Card title</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			<div className="cardButtons">
-				<a href="#" className="btn btn-primary">Learn more!</a>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
-			</div>
-			</div>
-		</div>
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+	
+		
 	</div>
+	
+
+	<Subtitle title="Vehículos"/>
+
+
+	<div className="row row-characters cont">
+	
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+	
+		
+	</div>
+	<br></br>
 	</>
 );

@@ -8,10 +8,9 @@ export const Navbar = () => {
   <div className="container-fluid myCont">
    
     
-
-			<div className="logoSW">
-
-			</div>
+			<Link to="/">
+			<div className="logoSW"></div>
+			</Link>
 			
 			<div className="dropdown">
 			<button className="btn btn-primary dropdown-toggle btn-nav" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
