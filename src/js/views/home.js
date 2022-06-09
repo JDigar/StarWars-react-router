@@ -6,6 +6,7 @@ import Subtitle from "./../component/subtittleHome.js"
 
 export const Home = () => (
 <>
+<div className="padt"></div>
 <Subtitle title="Personajes"/>
 
 	<div className="row row-characters cont">
