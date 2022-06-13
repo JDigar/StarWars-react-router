@@ -1,15 +1,16 @@
 import React from "react";
+import propTypes from "prop-types";
 import { useEffect, useContext } from "react/cjs/react.production.min";
 import { useParams } from "react-router";
 import { Context } from "../store/appContext.js";
 
 
-const Detalles = (props) => {
+const Detalles = () => {
     const { store, actions } = useContext(Context);
-    const [dataItem, setDataItems] = useState({})
+    const [dataItem, setDataItem] = useState({})
 
     const {theid} = useParams();
-    console.log(theid)
+    
 
     useEffect(()=>{
         actions.getOnePeople(theid);
@@ -28,7 +29,7 @@ return (
         <div className="col-6 text-center container-fluid">
 
         <div className="padt"></div>
-        <h1>Esto es el título {dataItem.name} </h1>
+        <h1>Esto es el título {store.dataItem.name} </h1>
         <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
       

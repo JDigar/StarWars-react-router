@@ -7,6 +7,7 @@ import Subtitle from "./../component/subtittleHome.js"
 export const Home = (props) => {
 	const {store} = useContext(Context);
 	
+	
 	return (
 <>
 <div className="padt"></div>
@@ -17,6 +18,7 @@ export const Home = (props) => {
 		{store.personajes.map((item, index) => <Card key={index} name={item.name} id={index+1} height={item.height} gender={item.gender} eye_color={item.eye_color} />)}
 		
 	</div>
+
 
 
 	<Subtitle title="Planetas"/>

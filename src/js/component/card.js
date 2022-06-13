@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({name, height, id, gender, eye_color}) => {    //Aqui recibo los props
 
+
 	
     return (
         <>
