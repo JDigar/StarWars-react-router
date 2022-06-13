@@ -1,24 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useContext}  from "react";
+import { Context } from "../store/appContext";
 import Card from "./../component/card.js"
 import "../../styles/home.css";
 import Subtitle from "./../component/subtittleHome.js"
 
-export const Home = () => (
+export const Home = () => {
+	const {store} = useContext(Context);
+	
+	return (
 <>
 <div className="padt"></div>
 <Subtitle title="Personajes"/>
 
 	<div className="row row-characters cont">
 	
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-	
+		{store.personajes.map((item) => <Card name={item.name} height={item.height} />)}
+		
 	</div>
 
 
@@ -58,3 +55,4 @@ export const Home = () => (
 	<br></br>
 	</>
 );
+} 

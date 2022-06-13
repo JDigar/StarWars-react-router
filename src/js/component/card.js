@@ -1,18 +1,18 @@
-import React, {useContext}  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
 
-const Card = () => {
-	const {store, actions} = useContext(Context);
-	console.log(store.personajes);
+
+const Card = ({name, height}) => {    //Aqui recibo los props
+
+	
     return (
         <>
         
         <div className="card" >
 			<div className="img-card">400x200px</div>
 			<div className="card-body">
-			<h5 className="card-title">{store.personajes.map((item) => item.name[6])}</h5>
-			<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			<h5 className="card-title">{name}</h5>
+			<p className="card-text">height: {height}</p>
 			
 			<div className="cardButtons">
 				<Link to="/detalles">
