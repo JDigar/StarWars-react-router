@@ -15,6 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			personajes: [],
 			planetas: [],
+			vehículos: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -26,10 +27,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
 			},
-			obtenerPersonajes: () =>{
-				fetch('https://www.swapi.tech/api/people/1')
+			obtenerPersonajes: () => {
+				fetch('https://www.swapi.tech/api/people/')
 				.then((response)=>response.json())
-				.then(data => console.log(data.results))
+				.then(data => setStore({personajes: data.results}))
 			},
 			changeColor: (index, color) => {
 				//get the store
@@ -41,6 +42,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					if (i === index) elm.background = color;
 					return elm;
 				});
+
+			
 
 				//reset the global store
 				setStore({ demo: demo });
