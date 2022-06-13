@@ -4,7 +4,7 @@ import Card from "./../component/card.js"
 import "../../styles/home.css";
 import Subtitle from "./../component/subtittleHome.js"
 
-export const Home = () => {
+export const Home = (props) => {
 	const {store} = useContext(Context);
 	
 	return (
@@ -14,7 +14,7 @@ export const Home = () => {
 
 	<div className="row row-characters cont">
 	
-		{store.personajes.map((item) => <Card name={item.name} height={item.height} />)}
+		{store.personajes.map((item, index) => <Card key={index} name={item.name} id={index+1} height={item.height} gender={item.gender} eye_color={item.eye_color} />)}
 		
 	</div>
 
