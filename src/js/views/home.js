@@ -2,17 +2,18 @@ import React, {useContext}  from "react";
 import { Context } from "../store/appContext";
 import Card from "./../component/card.js"
 import CardPlanets from "../component/planets.js";
+import CardVehicles from "../component/vehicles.js"
 import "../../styles/home.css";
 import Subtitle from "./../component/subtittleHome.js"
 
 export const Home = (props) => {
 	const {store} = useContext(Context);
-	console.log(store.planetas);
+	// console.log(store.planetas);
 	
 	return (
 <>
 <div className="padt"></div>
-<Subtitle title="Personajes"/>
+<Subtitle title="Characters"/>
 
 	<div className="row row-characters cont">
 	
@@ -22,7 +23,7 @@ export const Home = (props) => {
 
 
 
-	<Subtitle title="Planetas"/>
+	<Subtitle title="Planets"/>
 
 	<div className="row row-characters cont">
 	
@@ -32,20 +33,13 @@ export const Home = (props) => {
 
 	
 
-	<Subtitle title="Vehículos"/>
+	<Subtitle title="Vehicles"/>
 
 
 	<div className="row row-characters cont">
 	
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-	
-		
+		{store.vehiculos.map((item, index) => <CardVehicles key={index} name={item.name} model={item.model} manufacturer={item.manufacturer} cost_in_credits={item.cost_in_credits} id={index} />)}
+		 
 	</div>
 	<br></br>
 	</>

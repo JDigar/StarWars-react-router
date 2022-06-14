@@ -8,6 +8,7 @@ import injectContext from "./store/appContext";
 import Detalles from "./views/detalles";
 import { Footer } from "./component/footer";
 import DetallesPlanetas from "./views/planetsDetails";
+import DetallesVehiculos from "./views/VehiclesDetails";
 
 //create your first component
 const Layout = () => {
@@ -29,6 +30,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/planetsDetails/:theid">
 							<DetallesPlanetas />
+						</Route>
+						<Route exact path="/VehiclesDetails/:theid">
+							<DetallesVehiculos />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
