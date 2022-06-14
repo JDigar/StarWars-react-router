@@ -66,16 +66,22 @@ h2 {
 .img-card{
     width: 400px;
     height: 200px;
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
     margin: 5px 7px 0px 0px;
     border-radius: 5px;
     text-align: center;
     font-size: 30px;
 }
 
+.img-fluid {
+    height: 100%;
+    width: 100%;
+}
+
+
 .btn {
     background-color: white;
-    color: blue;
+    color: red;
 }
 
 .btn-heart {
@@ -91,19 +97,37 @@ h2 {
   
 }
 
-.img-detalles {
-    background-color: red;
+/* .img-detalles {
+   background-color: red;
     width: 400px;
     height: 300px;
-
-
-   
-}
+ 
+ } */
 
 .lineSeparating {
     height: 2px;
   background-color: rgb(255, 0, 0);
   margin: 30px 0px 30px 0px;
+}
+
+.wards-details {
+    text-align: center;
+    color: red;
+}
+
+/* .bg-detalles{
+    background-image: url(https://st2.depositphotos.com/3031831/5365/i/450/depositphotos_53655241-stock-photo-black-space-with-many-stars.jpg);
+    width: auto;
+    height: auto;
+} */
+
+.details2 {
+    color: black;
+}
+
+.btn-home{
+    padding: 30px;
+    text-align: center;
 }
 
 .padt {

@@ -13,7 +13,7 @@ export const Navbar = () => {
 			</Link>
 			
 			<div className="dropdown">
-			<button className="btn btn-primary dropdown-toggle btn-nav" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+			<button className="btn btn-danger dropdown-toggle btn-nav" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 			Favorites
 			</button>
 			<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">

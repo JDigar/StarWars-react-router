@@ -1,8 +1,8 @@
-import React from "react";
-import propTypes from "prop-types";
-import { useEffect, useContext } from "react/cjs/react.production.min";
-import { useParams } from "react-router";
+import React, {useContext, useState} from "react";
+
+import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext.js";
+import { Link } from "react-router-dom";
 
 
 const Detalles = () => {
@@ -10,18 +10,24 @@ const Detalles = () => {
     const [dataItem, setDataItem] = useState({})
 
     const {theid} = useParams();
+   
+    
     
 
-    useEffect(()=>{
-        actions.getOnePeople(theid);
-    }, [])
+    // useEffect(()=>{
+    //     actions.getOnePeople(theid);
+    // }, [])
+    // console.log(store.personajes[theid].name);
 
 return (
 <>
-<div className="row container-fluid cont justify-content-center pt-5">
+
+<div className="row container-fluid cont justify-content-center pt-5 bg-detalles">
         <div className="col-6 container-fluid">
 
-            <div className="img-detalles"></div>
+            <div className="img-detalles">  
+            <img className="img-fluid pt-5" src={store.image[theid]}/>
+            </div>
 
         </div>
 
@@ -29,8 +35,8 @@ return (
         <div className="col-6 text-center container-fluid">
 
         <div className="padt"></div>
-        <h1>Esto es el título {store.dataItem.name} </h1>
-        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <h1>{store.personajes[theid]?.name}</h1> {/*Poner signo de interrogacion (?) justo antes de la propiedad que se está quejando cuando no reconoce una propiedad cuando hemos probado que funciona */}
+        <p> 
         </p>
       
 
@@ -40,17 +46,25 @@ return (
 
         <div className="lineSeparating"></div>
 
-        <div className="row">
-            <div className="col-2">Name</div>
-            <div className="col-2">Birth Year</div>
-            <div className="col-2">Gender</div>
-            <div className="col-2">Height</div>
-            <div className="col-2">Skin Color</div>
-            <div className="col-2">Eye Color</div>
+        <div className="row wards-details">
+            <div className="col-2"><strong>Name</strong><br></br><span className="details2">{store.personajes[theid]?.name}</span></div>
+            <div className="col-2"><strong>Birth Year</strong><br></br><span className="details2">{store.personajes[theid]?.birth_year}</span></div>
+            <div className="col-2"><strong>Gender</strong><br></br><span className="details2">{store.personajes[theid]?.gender}</span></div>
+            <div className="col-2"><strong>Height</strong><br></br><span className="details2">{store.personajes[theid]?.height}</span></div>
+            <div className="col-2"><strong>Skin Color</strong><br></br><span className="details2">{store.personajes[theid]?.skin_color}</span></div>
+            <div className="col-2"><strong>Eye Color</strong><br></br><span className="details2">{store.personajes[theid]?.eye_color}</span></div>
             
         </div>
+
+        <div className="btn-home">
+				<Link to={"/"}>
+				<span className="btn btn-danger">Back Home</span>
+				</Link>
+		
+			</div>
         
 </div>
+
 
 
 </>
