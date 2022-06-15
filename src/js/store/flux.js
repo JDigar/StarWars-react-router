@@ -59,12 +59,24 @@ const getState = ({ getStore, getActions, setStore, theid }) => {
 			planetas: [],
 			vehiculos: [],
 			dataItem: {},
+			likes: [], //Creamos el espacio de memoria en forma de array.
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
+
+			addFavorit: (name) => {
+				
+				const store = getStore(); //Obtenemos Store con "getStore"
+				setStore({likes: store.likes.concat(name)}); //Actualizamos la informacion que está en like conctenando el valor de name.
+				
+				console.log(store);
+
+			},
+
+
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
