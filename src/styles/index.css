@@ -134,4 +134,14 @@ h2 {
     padding-top: 50px;
 }
 
+.favorites{
+    padding: 5px;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+
+}
  
+.dropdown-menu{
+    width: auto;
+}
