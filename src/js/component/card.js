@@ -24,7 +24,7 @@ const Card = ({name, height, id, gender, eye_color}) => {    //Aqui recibo los p
 				<Link to={"/detalles/"+ id}>
 				<span className="btn btn-danger"><strong>Learn more</strong></span>
 				</Link>
-				<button href="#" onClick={()=>actions.addFavorit(name)} className="btn btn-danger btn-heart">♡</button>
+				<button onClick={()=>actions.addFavorit(name)} className="btn btn-danger btn-heart">♡</button>
 			</div>
 			
 			</div>

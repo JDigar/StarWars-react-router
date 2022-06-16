@@ -16,7 +16,6 @@ const CardPlanets = ({name, id, rotation_period, population, diameter }) => {   
         
         <div className="card" >
 			<div className="img-card"> <img className="img-fluid" src={store.img_planets[id]} /> </div>
-            {/* <img className="img-fluid" src={store.image[id]} /> */}
 
 			<div className="card-body">
 			<h5 className="card-title"> <strong> {name} </strong></h5>
@@ -27,7 +26,7 @@ const CardPlanets = ({name, id, rotation_period, population, diameter }) => {   
                
 				<span className="btn btn-danger"><strong>Learn more</strong></span>
 				</Link>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
+				<button onClick={()=>actions.addFavorit(name)} className="btn btn-danger btn-heart">♡</button>
 			</div>
 			
 			</div>

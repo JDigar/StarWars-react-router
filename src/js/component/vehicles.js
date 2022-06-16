@@ -27,7 +27,7 @@ const CardVehicles = ({name, id, model, manufacturer, cost_in_credits  }) => {  
                
 				<span className="btn btn-danger"><strong>Learn more</strong></span>
 				</Link>
-				<a href="#" className="btn btn-danger btn-heart">♡</a>
+				<button onClick={()=>actions.addFavorit(name)} className="btn btn-danger btn-heart">♡</button>
 			</div>
 			
 			</div>

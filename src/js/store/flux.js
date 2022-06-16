@@ -67,13 +67,28 @@ const getState = ({ getStore, getActions, setStore, theid }) => {
 				getActions().changeColor(0, "green");
 			},
 
-			addFavorit: (name) => {
+			addFavorit: (name) => { //Creamos la funcion para obtener el nombre con el Onclick
 				
 				const store = getStore(); //Obtenemos Store con "getStore"
-				setStore({likes: store.likes.concat(name)}); //Actualizamos la informacion que está en like conctenando el valor de name.
+				setStore({likes: store.likes.concat(name)}); //Actualizamos la informacion que está en like concatenando el valor de name.
 				
 				console.log(store);
 
+			},
+
+			borrar: (index) => { //Creamos la funcion para obtener el nombre con el Onclick
+
+				const store = getStore();
+				setStore({likes: store.likes.filter((like, i) => i != index)})
+				
+				console.log(index);
+				
+				
+				// const store = getStore(); //Obtenemos Store con "getStore"
+				// setStore({likes: store.likes.concat(name)}); //Actualizamos la informacion que está en like concatenando el valor de name.
+				
+				// console.log(store);
+				
 			},
 
 
